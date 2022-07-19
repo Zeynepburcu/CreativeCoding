@@ -1,0 +1,41 @@
+<html>
+	<body>
+		<h1 style="text-align: right">deathly hallows</h1>
+		<canvas width="500" height="500" style=""></canvas>
+
+		<script>
+
+			//setup
+			let canva = document.querySelector('canvas');
+			let context = canva.getContext('2d');
+			
+			//style
+			context.lineWidth = 5;
+
+			//circle
+			context.beginPath();
+			context.arc(300, 335, 110,0, Math.PI * 2);
+			context.stroke();
+
+			//triangle
+			context.beginPath();
+			context.moveTo(300,100);
+			context.lineTo(500,450);
+			context.lineTo(100,450);
+			context.lineTo(300,100);
+			context.stroke();
+
+			//line
+			context.beginPath();
+			context.moveTo(300,100);
+			context.lineTo(300,450);
+			context.stroke();
+
+
+
+
+
+		</script>
+		<p style="text-align: right">It is the unknown we fear when we look upon death and darkness, nothing more.</p>
+	</body>
+</html>

@@ -1,0 +1,86 @@
+<html>
+	<body>
+		<canvas width="600" height="600"></canvas>
+
+		<script>
+
+			//setup
+			let canva = document.querySelector('canvas');
+			let context = canva.getContext('2d');
+
+
+			//bold squares
+			for (let i = 0; i < 5; i++) {
+				context.lineWidth = 2;
+				context.beginPath();
+				context.rect(100 * i, 100 * i, 60, 60);
+				//context.stroke();
+
+			}
+
+			//thin squares
+			for (let ii = 0; ii < 10; ii++) {
+				context.lineWidth = 1;
+				context.beginPath();
+				context.rect(50 * ii + 10, 50 * ii + 10, 80, 80);
+				//context.stroke();
+			}	
+					
+			//tutorial
+			for (let j = 0; j < 5; j++) {
+				for (let k = 0; k < 5; k++) {
+					let width = 60;
+					let height = 60;
+					let gap = 20;
+					let x = 100 + (width + gap) * j;
+					let y = 100 + (height + gap) * k;
+
+					//outer rect
+					context.beginPath();
+					context.fillRect(x, y, width, height);
+					context.fillStyle = 'gray';
+
+
+					//condition
+					if (j > 0 && j < 4) {
+
+						//inner rect
+						context.beginPath();
+						context.fillRect(x + 8, y + 8, width - 16, height - 16);
+						context.fillStyle = 'black';
+						//context.stroke();
+						context.lineWidth = 3;
+
+
+					}	
+
+					//random mini squares
+						if (Math.random() > 0.5) {
+							context.beginPath();
+							context.fillRect(x + 16, y + 16, width - 32, height - 32);
+							context.fillStyle = 'purple';
+							context.stroke();
+							context.lineWidth = 2;
+					}
+
+				}
+			}
+
+
+		Math.random() // 0 ... 1 
+
+
+
+			
+
+
+
+		
+
+
+
+
+		</script>
+		<h1 id=say>Listen: </h1>
+	</body>
+</html>
