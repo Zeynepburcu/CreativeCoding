@@ -1,7 +1,7 @@
 <html>
 	<body>
 		<h1 style="text-align: right">deathly hallows</h1>
-		<canvas width="500" height="500" style=""></canvas>
+		<canvas width="800" height="800" style=""></canvas>
 
 		<script>
 
@@ -11,24 +11,30 @@
 			
 			//style
 			context.lineWidth = 5;
+			let gap = 20;
+			let a = 300;
+			let h = 300 * Math.sqrt(3);
+			let r = h / 3;
+			let R = 2 * h / 3;
+		
 
 			//circle
 			context.beginPath();
-			context.arc(300, 335, 110,0, Math.PI * 2);
+			context.arc(a, R, r ,0 , Math.PI * 2);
 			context.stroke();
 
 			//triangle
 			context.beginPath();
-			context.moveTo(300,100);
-			context.lineTo(500,450);
-			context.lineTo(100,450);
-			context.lineTo(300,100);
+			context.moveTo(a ,0);
+			context.lineTo(2 * a, h);
+			context.lineTo(0, h);
+			context.lineTo(a,0);
 			context.stroke();
 
 			//line
 			context.beginPath();
-			context.moveTo(300,100);
-			context.lineTo(300,450);
+			context.moveTo(a,0);
+			context.lineTo(a,h);
 			context.stroke();
 
 
